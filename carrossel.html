@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/newstyle.css">
+    <title>Slide</title>
+</head>
+
+<body>
+    <!---SLides de Imagem INICIO-->
+    <!---SLides de Imagem FIM-->
+    <!-- <div class="logo">
+        <img src="/CathedralSoftware.png" style="width: 120px; height: 120px; transform:translate(510%); position: relative; top:-455px;">
+    </div> -->
+    <div class="slider">
+        <div class="slides">
+            <!--Radio butons INICIO-->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <input type="radio" name="radio-btn" id="radio5">
+            <!--Radio butons FIM-->
+            <!--SLIDE IMAGES COMEÇO-->
+            <div class="slide s1">
+                <img src="./fundo05.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="./fundo04.jpg" alt="">
+            </div>
+
+            <div class="slide">
+                <img src="./fundo03.jpg" alt="">
+            </div>
+
+            <div class="slide">
+                <img src="./fundo02.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="./fundo01.jpg" alt="">
+            </div>
+            <!--SLIDE IMAGES FIM-->
+            <!--Navegação automatica INICIO-->
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+                <div class="auto-btn5"></div>
+            </div>
+            <!--Navegação automatica FIM-->
+        </div>
+        <!--Navegação manual INICIO-->
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+            <label for="radio5" class="manual-btn"></label>
+        </div>
+        <!--Navegação manual FIM-->
+    </div>
+    <!--Slide das imagens FIM-->
+    <!--JAVASCRIPT -->
+    <script type="text/javascript">
+        var counter = 1;
+        setInterval(function() {
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if (counter > 5) {
+                counter = 1;
+            }
+        }, 3000);
+    </script>
+
+</body>
+
+<form>
+    <input type="button" name="btn-sair" value="Sair" onclick="javascript:window.close()" style="width: 100px; height: 50px; border-radius:90px; cursor: pointer; transform:translate(60%); position: relative; top: -305px; background-color: rgb(255, 214, 51); ">
+</form>
+
+</html>
